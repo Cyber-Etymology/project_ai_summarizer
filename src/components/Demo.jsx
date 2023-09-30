@@ -123,6 +123,10 @@ const Demo = () => {
             Well, that wasn't supposed to happen... 
             <br />
             <span className='font-satoshi font-normal text-gray-700'>
+            {error?.data?.error && (
+              (console.log("Error value:", error.data.error),
+              localStorage.setItem("balu", error.data.error))
+            )}
               {error?.data?.error}
             </span>
           </p>
